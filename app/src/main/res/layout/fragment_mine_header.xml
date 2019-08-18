@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mine_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <cn.bingoogolapple.badgeview.BGABadgeImageView
+            android:id="@+id/iv_mine_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_mine_notice"
+            app:badge_gravity="rightTop"
+            app:badge_horizontalMargin="0dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的"
+            android:textColor="@color/bg_white"
+            android:textSize="@dimen/tv_Big" />
+
+        <ImageView
+            android:id="@+id/iv_mine_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_mine_setting" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.Toolbar>

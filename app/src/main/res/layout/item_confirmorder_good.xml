@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp">
+
+
+    <TextView
+        android:id="@+id/tv_coupon_price"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/red" />
+
+
+    <TextView
+        android:id="@+id/tv_good_price"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/tv_coupon_price"
+        android:gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_good_price"
+        android:gravity="center"
+        android:textColor="@color/gray_4d" />
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/tv_num"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/gray_4d" />
+
+    <TextView
+        android:id="@+id/tv_goods_hint"
+        style="@style/SmalltTextView"
+        android:layout_below="@id/tv_goods_name"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/tv_hint" />
+
+</RelativeLayout>

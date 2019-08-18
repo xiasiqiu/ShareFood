@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:id="@+id/mtoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@drawable/view_background_color"
+    android:elevation="3dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:background="@drawable/view_background_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:visibility="gone"
+            android:src="@drawable/back" />
+
+        <LinearLayout
+            android:id="@+id/ll_et"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bg">
+
+            <com.xinyuan.xyorder.widget.EditTextWithDel
+                android:id="@+id/et_search_food"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="@string/search_hint"
+                android:singleLine="true"
+                android:textColor="@color/tv_hint"
+                android:textColorHint="@color/tv_hint"
+                android:paddingRight="10dp"
+                android:textSize="@dimen/tv_light" />
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:src="@drawable/act_home_search_de" />
+        </LinearLayout>
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/slb_type"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:elevation="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="15dp"
+            app:tl_divider_padding="0dp"
+            app:tl_indicator_color="@color/green"
+            app:tl_indicator_height="0dp"
+            app:tl_indicator_width_equal_title="false"
+            app:tl_tab_space_equal="false"
+            app:tl_tab_padding="8dp"
+            app:tl_textSelectColor="@color/bg_white"
+            app:tl_textUnselectColor="@color/gray_d2"
+            app:tl_textsize="@dimen/tv_Regular"
+            android:layout_below="@+id/ll_et"/>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

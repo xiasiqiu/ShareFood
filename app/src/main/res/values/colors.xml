@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#55c164</color>
+    <color name="colorPrimaryDark">#08983c</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="tv_name">#1a1a1a</color>
+    <color name="tv_66">#666666</color>
+    <color name="bg_white">#ffffff</color>
+    <!--分割线的颜色-->
+    <color name="colorLine">#dcdcdc</color>
+    <color name="colorLine_a">#aaaaaa</color>
+    <color name="gray_e5">#e5e5e5</color>
+    <color name="tv_hint">#808080</color>
+    <color name="tv_99">#999999</color>
+
+    <color name="bg_gray">#e6e9ef</color>
+    <color name="tv_b1">#b1b0b0</color>
+
+    <color name="gray_d9">#d9d9d9</color><!--背景色 -->
+    <color name="green">#1da03a</color>
+    <color name="yellow_f3">#f39800</color>
+    <color name="white_fa">#fafafa</color>
+    <color name="white_f2">#f2f2f2</color>
+    <color name="white_f5">#f5f5f5</color>
+    <color name="white_f7">#f7f7f7</color>
+    <color name="white_f8">#f8f8f8</color>
+    <color name="hint_text">#e1e1e1</color>
+    <color name="tv_91">#919191</color>
+    <color name="black">#000000</color>
+    <color name="mask_color">#88888888</color>
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="black_33">#333333</color>
+    <color name="gray_cc">#cccccc</color>
+    <color name="bottom_43">#434343</color>
+    <color name="gray_4d">#4d4d4d</color>
+    <color name="gray_4b">#4b4a4a</color>
+    <color name="gray_a5">#a5a5a5</color>
+    <color name="menu_de_color">#adadad</color>
+    <color name="detail_like">#ff6000</color>
+    <color name="yellow">#ffb03f</color>
+    <color name="colorTransparency_H">#6A000000</color>
+    <color name="type_normal">#6b6b6b</color>
+    <color name="type_gray">#f8f8f8</color>
+    <color name="divider_gray">#fafafa</color>
+    <color name="whitesmoke">#f5f5f5</color>
+    <color name="detail_command">#757575</color>
+    <color name="detail_hint">#bbbbbb</color>
+    <color name="tv_cfcfcf">#cfcfcf</color>
+
+
+    <color name="transparent_bg">#80000000</color>
+    <color name="loading_bg">#80000000</color>
+    <color name="head_bg">#20000000</color>
+    <color name="colorTransparency">#0000</color>
+    <color name="colorTransparency_Y">#6Af39800</color>
+    <color name="gray_d8">#d8d8d8</color>
+
+    <color name="blue">#00a0e8</color>
+    <color name="price_1a">#1a1a1a </color>
+    <color name="order_finished">#6c6c6c</color>
+    <color name="green_1">#37bd43</color>
+
+    <color name="colorTransparency_G">#3308983c</color>
+
+
+    <color name="red">#ff533a</color>
+    <color name="dividerColor">#BDBDBD</color>
+    <color name="order_detail">#666666</color>
+    <color name="bg_yellow">#f3a41d</color>
+    <color name="gray_a0">#a0a0a0</color>
+    <color name="gray_d2">#d2d2d2</color>
+    <color name="goods_spec">#FF5337</color>
+    <color name="bg_goods_spec">#11C15B</color>
+    <color name="bg_goods_tv">#F6F5F5</color>
+    <color name="bg_goods_tv_checked">#DCF6E7</color>
+</resources>

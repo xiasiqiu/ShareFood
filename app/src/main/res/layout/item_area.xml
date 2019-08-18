@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_search_item"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+
+    <TextView
+        android:id="@+id/rb_SortDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="@drawable/text_btn_color"
+        android:textSize="@dimen/tv_Normal" />
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_area_check" />
+
+    <View
+        style="@style/LightLine"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

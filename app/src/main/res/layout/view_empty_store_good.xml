@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_empty_store_good"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/empty_mine_collection" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/XFrame_spacing_large"
+        android:text="这里已经空空如也"
+        android:textColor="@color/XFrame_text_gray"
+        android:textSize="@dimen/XFrame_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="该店铺还未上传商品，敬请期待"
+        android:textColor="@color/XFrame_text_gray"
+        android:textSize="@dimen/XFrame_text_size_small" />
+</LinearLayout>

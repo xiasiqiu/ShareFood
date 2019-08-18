@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_white">
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/tv_Blod" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:text=""
+        android:textColor="@color/gray_a5"
+        android:textSize="@dimen/tv_Normal" />
+
+    <TextView
+        android:id="@+id/tv_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@+id/tv_user_name"
+        android:text=""
+        android:textColor="@color/gray_a5"
+        android:textSize="@dimen/tv_Normal" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_user_name"
+        android:background="@color/gray_d9" />
+</RelativeLayout>

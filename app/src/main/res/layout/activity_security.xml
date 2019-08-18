@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_header_tv_tv" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/RegularTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="头像" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_head"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/fragmentation_ic_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray_d9" />
+
+        <RelativeLayout
+            android:id="@+id/rl_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/RegularTextView"
+                android:layout_centerVertical="true"
+                android:text="用户名" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/NormalTextView"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tel_band"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:padding="15dp">
+
+        <TextView
+            style="@style/RegularTextView"
+            android:text="绑定手机" />
+
+        <TextView
+            android:id="@+id/tv_tel_bind"
+            style="@style/NormalTextView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="已绑定"
+            android:textColor="@color/tv_hint" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/fragmentation_ic_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray_d9" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_user_wechat"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/bg_white"-->
+    <!--android:padding="15dp">-->
+
+    <!--<TextView-->
+    <!--style="@style/RegularTextView"-->
+    <!--android:text="绑定微信" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_wechat_bind"-->
+    <!--style="@style/NormalTextView"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:text="未绑定"-->
+    <!--android:textColor="@color/tv_hint" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@drawable/fragmentation_ic_right" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/gray_d9" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_user_alipay"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/bg_white"-->
+    <!--android:padding="15dp">-->
+
+    <!--<TextView-->
+    <!--style="@style/RegularTextView"-->
+    <!--android:text="绑定支付宝" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_alipay_bind"-->
+    <!--style="@style/NormalTextView"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:text="未绑定"-->
+    <!--android:textColor="@color/tv_hint" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@drawable/fragmentation_ic_right" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/gray_d9" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_user_qq"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/bg_white"-->
+    <!--android:padding="15dp">-->
+
+    <!--<TextView-->
+    <!--style="@style/RegularTextView"-->
+    <!--android:text="绑定QQ" />-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_email_bind"-->
+    <!--style="@style/NormalTextView"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:text="未绑定"-->
+    <!--android:textColor="@color/tv_hint" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@drawable/fragmentation_ic_right" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/gray_d9" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_update_pwd"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@color/bg_white"-->
+    <!--android:padding="15dp">-->
+
+    <!--<TextView-->
+    <!--style="@style/RegularTextView"-->
+    <!--android:text="修改登录密码" />-->
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@drawable/fragmentation_ic_right" />-->
+    <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/tv_exit_login"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@id/rl_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/rect_green"
+        android:gravity="center"
+        android:text="退出当前账号"
+        android:textColor="@color/bg_white"
+        android:textSize="17sp" />
+</LinearLayout>

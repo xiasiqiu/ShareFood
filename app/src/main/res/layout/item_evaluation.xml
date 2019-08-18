@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            style="@style/RegularTextView"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/sb_goods_evaluation"
+            android:textColor="@color/gray_4d" />
+
+        <com.xinyuan.xyorder.widget.StarBar
+            android:id="@+id/sb_goods_evaluation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            ratingbar:starCount="5"
+            ratingbar:starDistance="10dp"
+            ratingbar:starEmpty="@drawable/ic_store_star_default"
+            ratingbar:starFill="@drawable/ic_store_star"
+            ratingbar:starSize="16dp" />
+    </RelativeLayout>
+
+    <com.nex3z.flowlayout.FlowLayout
+        android:id="@+id/fl_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        ratingbar:childSpacing="10dp"
+        ratingbar:rowSpacing="10dp" />
+
+    <EditText
+        android:id="@+id/et_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rect_gray_white"
+        android:gravity="left|top"
+        android:hint="说说哪里满意"
+        android:minHeight="100dp"
+        android:padding="5dp"
+        android:textColorHint="@color/tv_hint"
+        android:textSize="@dimen/tv_Normal" />
+</LinearLayout>

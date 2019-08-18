@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xinyuan.xyorder">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /><!-- iBeancon功能所需权限 -->
+    ;
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /><!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".app.SophixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${app_name}"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="label">
+        <!-- 高德地图key  -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${GAODE_KEY_VALUE}" />
+
+        <activity
+            android:name=".ui.home.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".ui.stores.StoreDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransStatusBase"></activity>
+        <activity
+            android:name=".ui.stores.GoodDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleTranslucentTheme"></activity>
+        <activity
+            android:name=".ui.buy.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ui.myorder.OrderInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateUnchanged"></activity>
+        <activity android:name=".util.BigPhoto.BigPhotoActivity" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name=".ui.mine.WebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.address.ConfirmAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <receiver
+            android:name=".wxapi.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="sdksample" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59fc380df29d9838000000b4" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="GuanWang" />
+
+        <service
+            android:name=".common.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"></service>
+        <service android:name=".common.service.IntentService" />
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <!--<meta-data-->
+        <!--android:name="com.xinyuan.xyorder.common.GlideModelConfig"-->
+        <!--android:value="GlideModule" />-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24759141-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="7a7536a17d79795889f35ca60a97364c" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCc9d3yMnWD3mqgZiBHVKCjyu1buTHSvD9OtbxxwJUqj2YSBkbVEQ4X2ZjvZFWxspIgXO/5vBRxtmQ1cgdzPHgv6nuMBOvqnt1iNiMZUKJIFQYZdLij4DP3ubuX3GSEkC9FFgTiu35MszTm/KHvTw3HNUXCnk6C+efzJhG8kD7pCT2GvToZe0Bnvz3gENtvZQTPKIIAdsI2mHcmAYEfDDTNDNvgtchfH3amwPNIJeAXeip39Ppd3e9GKXmJkGePdhhYxlfA2IJMm/p2H9zyxVYMb4Zh+UFNsadCK4+10hwbBWkCUfiOHvxjn76OXRXzYMDZPsbpNz0z9spV9OnBWWr1AgMBAAECggEAX42KPTycr9fCP72MXwBU/wG1uAYpH6p8O9WFUBa2eH9t2wE5M9K7KqfMY8hIJvKX5N3PNdBa/dLUdHjjsjKY1ErCRb5lRKLMEVL10R52fL1Xxj15fkIqQOAwJMYF53HDZSJ/fOw5ekYKqagYiRAuShzTSCSJlVC/9RUy7QE/WyvQ7Rtw8I5tZX77BU/a56fntwnYx2rz1JsegEeEV8wO993hAo0gN/evDnKy+SBzSY2MZPNGfS7AMi0JX25u07QnxLc8fHg8N3USIQO7GFSC+cP7eQYzcsJ36CsCApw8uejLlPJKnN37NblDGOIItYZcnQP2dsnsdryzcwChPJBc7QKBgQDaqHTiywRg4n/k9zwWY6d/OslM8caD33tsdqaTAmdALNXEUmn8zqcEI+oWppARH57vMuy/aZcMSXGhNV36nD1g9cSj5gS2C3hxwDpinTKPkJx3TBELFHs0aePbP/7kFuCsxlAPvkcU2iAHR5DrmJciS9tU6Se5c1OIkY2Df9GaBwKBgQC3xAsGQmlpXFibGBOoGqQFKN9O0WmSAhajKieMjZXdi8x+wAEGYKlfhhTKmhTg7ZJdpxDe2twJS1abBBnMHNbXlEq772GZPry35ANJz+godK7hjCchEytu/0ytNKNWKPo3XNq9R/uHSol1FTDHdajWITpU4jcBuU1128JxIxzEIwKBgA876VjbuCRf43U6XG9a5hKRL/EybxhE+75kzdo0Mqlf9kzFSSkZ5Lz/G5IUbLkksNgNfj0fyCxM+aO3qiKJvCUDOn4Iyo88YVnbgLXaKemis6QEIrPY63SNZBikbsfJaEHhVzahlSY4xD59l/UyHmV/T3qs+92J0WoUaf2dbCcFAoGARiAQmO3k7ejogx7X+XFZIALt3FT7dVVIsDEY8IDjLKz5d3DrszRVzfcLnhjYWNEv5n8nZ/Oavg062mLhOUvUDGYxcrAxzVnsiDwBqTwmerG0PqvODsgS7gOMjhglMG7otRHBAzQh3wnplH1mpObYbAY4DUZZ+VVuIsie1a+xfYMCgYAlXS97pmrvC0Bl7LiZiRF3Omk5xRkVbyRFKyiMzDRZzBkxlHWIgKOoMLtO2vQ0pfwtdjFs38UjhlCWu0msWTUU/fjQk+jhQmOZhOmopprYThGbeDSqDiI5YlTJ03o1g22fd5R7+HJCuIhrcFqn1TOTdlcok2vQULUrk+oTYiZNlQ==" />
+    </application>
+
+</manifest>

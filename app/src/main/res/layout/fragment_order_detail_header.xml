@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_store_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/mapInfo"
+        layout="@layout/driver_mapview" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/mapInfo"
+        android:background="@color/white_f2" />
+
+    <ImageView
+        android:id="@+id/iv_store_logo1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/iv_store_logo1"
+        android:drawableRight="@drawable/ic_right_row"
+        android:gravity="center_vertical"
+        android:textColor="@color/tv_name"
+        android:textSize="@dimen/tv_Blod" />
+
+</RelativeLayout>

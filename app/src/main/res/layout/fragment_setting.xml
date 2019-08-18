@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_header_tv_tv" />
+
+    <LinearLayout
+        android:id="@+id/rl_clear"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_service_center"
+            style="@style/BlodTextView"
+            android:layout_width="0dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="清除缓存"
+            android:textColor="@color/gray_4d"
+            android:textSize="@dimen/tv_Blod" />
+
+        <TextView
+            android:id="@+id/tv_cache"
+            style="@style/NormalTextView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/tv_hint" />
+
+    </LinearLayout>
+
+    <View style="@style/LightLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <TextView
+            style="@style/BlodTextView"
+            android:layout_width="0dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="当前版本"
+            android:textColor="@color/gray_4d"
+            android:textSize="@dimen/tv_Blod" />
+
+
+        <TextView
+            android:id="@+id/tv_version"
+            style="@style/LightTextView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/tv_hint" />
+
+        <TextView
+            android:id="@+id/tv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/rect_green"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="NEW"
+            android:textColor="@color/bg_white"
+            android:textSize="@dimen/tv_smaller"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <View style="@style/LightLine" />
+
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:background="@color/bg_white"
+        android:drawableRight="@drawable/fragmentation_ic_right"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="关于共享点餐"
+        android:textColor="@color/gray_4d"
+        android:textSize="@dimen/tv_Blod" />
+
+</LinearLayout>

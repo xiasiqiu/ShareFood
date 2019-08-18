@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.xinyuan.xyorder"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "2.0.2"
+        flavorDimensions "2.0.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters "a rm64", "arm64-v8a", "armeabi", "armeabi-v7a", "x86", "x86_64"
+        }
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("xyorder.jks")
+            storePassword 'xy123456'
+            keyAlias 'xyorder'
+            keyPassword 'xy123456'
+        }
+
+        release {
+            storeFile file("xyorder.jks")
+            storePassword 'xy123456'
+            keyAlias 'xyorder'
+            keyPassword 'xy123456'
+        }
+
+    }
+    productFlavors {
+        _release {
+            applicationId "com.xinyuan.xyorder"
+            buildConfigField 'String', 'API_URL', '"http://api.gongxiangdiancan.com"'
+
+            manifestPlaceholders = [app_name        : "共享点餐", str: "releaseStr", package_name: "com.xinyuan.xyorder",
+                                    GAODE_KEY_VALUE : "220a4943b95258f6d3a093e372fade1b",
+                                    GETUI_APP_ID    : "A9G8280Evw7hi1X7QFRX34",
+                                    GETUI_APP_KEY   : "ZYtooTwiSq8DDw5uKZI341",
+                                    GETUI_APP_SECRET: "7g0ecU65dd9ZH35r5AA5L5"
+            ]
+            resValue("string"
+                    , "strKey", "releaseStrValue")
+        }
+
+        _dev {
+            applicationId "com.xinyuan.xyorder.test"
+            buildConfigField 'String', 'API_URL', '"http://api.test.gongxiangdiancan.com"'
+            manifestPlaceholders = [app_name        : "点餐测试", str: "devStr", package_name: "com.xinyuan.xyorder.test",
+                                    GAODE_KEY_VALUE : "438944d1ccd6a6269f33dfcf5d0eebf0",
+                                    GETUI_APP_ID    : "A9G8280Evw7hi1X7QFRX34",
+                                    GETUI_APP_KEY   : "ZYtooTwiSq8DDw5uKZI341",
+                                    GETUI_APP_SECRET: "7g0ecU65dd9ZH35r5AA5L5"]
+            resValue("string"
+                    , "strKey", "devStrValue")
+
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = "app_" + productFlavors[0].name + "_" + "_v" + defaultConfig.versionName + "-${releaseTime()}.apk";
+            }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':xframe')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.9'
+
+    //OKGo网络框架
+    compile 'com.lzy.net:okgo:3.0.4'
+    //Even Bus +Butterknife
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //GSON+GLIDE
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //recyclerView
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.15'
+    //widgetView第三方View
+    compile 'com.google.android:flexbox:0.2.6'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7'
+    compile 'cn.bingoogolapple:bga-badgeview:1.1.3'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.sunfusheng:marqueeview:1.2.0'
+    compile 'com.lzy.widget:imagepicker:0.5.5'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.shizhefei:ViewPagerIndicator:1.1.2'
+    compile 'com.github.florent37:viewanimator:1.0.5'
+    //fragment框架
+    compile 'me.yokeyword:fragmentation:1.1.9'
+    //ANR
+    compile 'cat.ereza:customactivityoncrash:1.5.0'
+    //二维码框架
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    //微信支付
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //更新
+    compile 'com.qianwen:update-app:3.3.8'
+    //个推
+    compile 'com.getui:sdk:2.11.1.0'
+    //友盟统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.belerweb:pinyin4j:2.5.1'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile files('libs/AMap3DMap_4.1.3_AMapLocation_3.2.1_20161228')
+    compile files('libs/AMap_Search_V3.5.0_20160927')
+    compile 'me.guhy:SwipeRefreshPlus:1.0.8'
+    compile 'com.nex3z:flow-layout:0.1.4'
+    compile 'com.github.chrisbanes.photoview:library:+'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    testCompile 'junit:junit:4.12'
+    implementation files('libs/alipaySdk-20170922.jar')
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="1dp"
+    android:paddingTop="1dp">
+
+    <TextView
+        android:id="@+id/tv_good_eva"
+        style="@style/NormalTextView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="3dp"
+        android:textColor="@color/gray_4d" />
+</RelativeLayout>

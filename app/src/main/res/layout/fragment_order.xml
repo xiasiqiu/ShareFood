@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center"
+        android:background="@drawable/view_background_color"
+        android:gravity="center"
+        android:text="我的订单"
+        android:textColor="@color/bg_white"
+        android:textSize="@dimen/tv_Big" />
+
+
+    <com.youth.xframe.widget.loadingview.XLoadingView
+        android:id="@+id/lodingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_f2" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </com.youth.xframe.widget.loadingview.XLoadingView>
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_header_tv_tv" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@color/bg_white"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/order_cancle_success"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="订单取消成功" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="选择取消订单原因，帮助我们改进"
+                android:textColor="@color/tv_hint"
+                android:textSize="@dimen/tv_Normal" />
+
+            <RadioGroup
+                android:id="@+id/rg_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white">
+
+                <RadioButton
+                    android:id="@+id/rb_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="支付遇到问题"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_Normal" />
+
+                <View style="@style/LightLine" />
+
+                <RadioButton
+                    android:id="@+id/rb_thing"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="临时有事，我不想要了"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_Normal" />
+
+                <View style="@style/LightLine" />
+
+                <RadioButton
+                    android:id="@+id/rb_error_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="信息错误，我想重新点"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_Normal" />
+
+                <View style="@style/LightLine" />
+
+                <RadioButton
+                    android:id="@+id/rb_error_chooes"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="点错了，我想重新点"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_Normal" />
+
+                <View style="@style/LightLine" />
+
+                <RadioButton
+                    android:id="@+id/rb_other_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="其他原因"
+                    android:textColor="@color/black_33"
+                    android:textSize="@dimen/tv_Normal" />
+
+                <EditText
+                    android:id="@+id/et_other_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/type_gray"
+                    android:gravity="left|top"
+                    android:hint="请输入其他原因"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:textSize="@dimen/tv_Normal"
+                    android:visibility="gone" />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rect_green"
+                android:text="提交"
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/tv_Blod" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_good_specification"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white">
+
+        <TextView
+            style="@style/LightTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/bg_white"
+            android:text="商品名称"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/tv_Big"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:onClick="close"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_spec_close" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_goods_spec"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/bg_white"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white_f7"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_t_price"
+            style="@style/LightTextView"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/money_rmb"
+            android:textColor="@color/goods_spec" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/BigTextView"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/tv_t_price"
+            android:gravity="center_vertical"
+            android:text="12"
+            android:textColor="@color/goods_spec"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_t_coupon_price"
+            style="@style/LightTextView"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@id/tv_price"
+            android:text="@string/money_rmb"
+            android:visibility="gone"
+            android:textColor="@color/gray_4d" />
+
+        <TextView
+            android:id="@+id/tv_coupon_price"
+            style="@style/LightTextView"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@id/tv_t_coupon_price"
+            android:gravity="center_vertical"
+            android:text="22"            android:visibility="gone"
+
+            android:textColor="@color/gray_4d"
+            android:textStyle="bold" />
+
+        <!--<com.xinyuan.xyorder.widget.AddWidget-->
+        <!--android:id="@+id/detail_add"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:background="@color/bg_white"-->
+        <!--app:circle_anim="true"-->
+        <!--app:sub_anim="true" />-->
+
+        <TextView
+            android:id="@+id/tv_choose_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_bg_goods_spec"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:paddingTop="5dp"
+            android:text="选好了"
+            android:textColor="@color/bg_white" />
+    </RelativeLayout>
+</LinearLayout>

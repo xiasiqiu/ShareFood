@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40px"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/v_top"
+        android:layout_width="1px"
+        android:layout_height="50px"
+        android:background="@color/gray_d9"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/iv_task_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/shape_gray_circle" />
+
+    <View
+        android:id="@+id/v_bottom"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/gray_d9" />
+</LinearLayout>

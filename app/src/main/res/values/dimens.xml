@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="tv_name_size">2dp</dimen>
+
+    <dimen name="textSize_sidebar">10sp</dimen>
+    <dimen name="large_textSize_sidebar">32sp</dimen>
+    <dimen name="textSize_sidebar_padding">20sp</dimen>
+    <dimen name="radius_sidebar">20dp</dimen>
+    <dimen name="ball_radius_sidebar">24dp</dimen>
+    <dimen name="padding_left">12dp</dimen>
+    <dimen name="padding_top">4dp</dimen>
+
+    <dimen name="tv_Heva">25sp</dimen>
+    <dimen name="tv_Big">17sp</dimen>
+    <dimen name="tv_Blod_16">16sp</dimen>
+    <dimen name="tv_Blod">15sp</dimen>
+    <dimen name="tv_Regular">14sp</dimen>
+    <dimen name="tv_Normal">13sp</dimen>
+    <dimen name="tv_light">12sp</dimen>
+    <dimen name="tv_light_s">11sp</dimen>
+    <dimen name="tv_small">10sp</dimen>
+    <dimen name="tv_smaller">8sp</dimen>
+
+    <dimen name="tv_price">19sp</dimen>
+
+    <dimen name="margin_left">45dp</dimen>
+    <dimen name="margin_right">45dp</dimen>
+    <dimen name="input_hight">45dp</dimen>
+    <dimen name="paper_padding">1dp</dimen>
+
+    <dimen name="paper_button_corner_radius">2dp</dimen>
+    <dimen name="item_height">60dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="header_height">140dp</dimen>
+
+    <dimen name="addsubview_btn_width">22dp</dimen>
+    <dimen name="addsubview_btn_padding">5dp</dimen>
+    <dimen name="addsubview_textsize">15sp</dimen>
+    <dimen name="addsubview_et_minwidth">28dp</dimen>
+
+    <dimen name="cut_margin">60dp</dimen>
+    <dimen name="add_width">75dp</dimen>
+    <dimen name="shopcar_height">70dp</dimen>
+</resources>

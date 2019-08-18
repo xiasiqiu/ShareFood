@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white_f2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_background_color"
+            app:contentScrim="@drawable/view_background_color"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:id="@+id/iv_store_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/img_background_color"
+                android:elevation="10dp"
+                android:scaleType="centerCrop"
+                android:translationZ="8dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:background="@color/bg_white"
+                android:paddingBottom="15dp"
+                android:paddingTop="50dp"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <TextView
+                    android:id="@+id/tv_wait_pay"
+                    style="@style/RegularTextView"
+                    android:layout_centerHorizontal="true"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@drawable/ic_right_row"
+                    android:gravity="center_vertical"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_evaluation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wait_pay"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_background_color"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="4dp"
+                    android:text="去评价"
+                    android:textColor="@color/bg_white"
+                    android:textSize="@dimen/tv_light"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_sure_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wait_pay"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_background_color"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="4dp"
+                    android:text="确认收货"
+                    android:textColor="@color/bg_white"
+                    android:textSize="@dimen/tv_light"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_wait_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wait_pay"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/tv_cancle_order"
+                        style="@style/LightTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_gray_white"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingTop="3dp"
+                        android:text="取消订单"
+                        android:textSize="@dimen/tv_light" />
+
+                    <TextView
+                        android:id="@+id/tv_go_to_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_cancle_order"
+                        android:background="@drawable/rect_red"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="3dp"
+                        android:text="去支付"
+                        android:textColor="@color/bg_white"
+                        android:textSize="@dimen/tv_light" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/fragment_order_detail_header_toolbar" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xinyuan.xyorder.widget.ShopCarView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/car_mainfl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/shopcar_height"
+    android:layout_gravity="bottom"
+    android:elevation="4dp"
+    android:gravity="bottom">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_cart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical|bottom"
+        android:background="@color/bottom_43"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            style="@style/RegularTextView"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp"
+            android:text="123"
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/tv_light"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_no_good"
+            style="@style/RegularTextView"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:text="未选购商品"
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/tv_light"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_original_price"
+            style="@style/RegularTextView"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/tv_total_price"
+            android:text="122"
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/tv_light"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_send_price"
+            style="@style/SmalltTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="80dp"
+            android:paddingBottom="5dp"
+            android:text="阿斯达是哒是哒"
+            android:textColor="@color/bg_white"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="去结算"
+            android:textColor="@color/bg_white"
+            android:textSize="@dimen/tv_Big"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_reserve"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_pay"
+            android:background="@color/yellow_f3"
+            android:gravity="center"
+            android:text="预定"
+            android:textColor="@color/bg_white"
+            android:textSize="@dimen/tv_Big"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/view_no_pay"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/gray_4b"
+            android:gravity="center"
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/tv_Big"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <cn.bingoogolapple.badgeview.BGABadgeImageView
+        android:id="@+id/iv_store_cart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_menu_main"
+        android:elevation="3dp"
+        app:badge_gravity="rightTop"
+        app:badge_horizontalMargin="0dp" />
+
+</com.xinyuan.xyorder.widget.ShopCarView>

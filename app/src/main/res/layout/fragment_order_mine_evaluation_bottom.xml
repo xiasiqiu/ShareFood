@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_f2"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_good_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/view_eva__item_image" />
+
+    <LinearLayout
+        android:id="@+id/ll_evaluating_business_services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_flag"
+                style="@style/RegularTextView"
+                android:layout_centerVertical="true"
+                android:text="评价商家服务" />
+
+            <ImageView
+                android:id="@+id/iv_shop_service_eva_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_flag"
+                android:background="@drawable/ic_eva_leve5"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/fl_seller_service_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            ratingbar:childSpacing="10dp"
+            ratingbar:rowSpacing="10dp" />
+
+        <TextView
+            android:id="@+id/tv_shop_eva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:textColor="@color/tv_b1"
+            android:layout_marginTop="3dp"
+            android:textSize="@dimen/tv_Normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_evaluating_sending_services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_flag2"
+                style="@style/RegularTextView"
+                android:layout_centerVertical="true"
+                android:text="评价配送服务" />
+
+            <ImageView
+                android:id="@+id/iv_delivery_service_eva_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_flag2"
+                android:background="@drawable/ic_eva_leve5"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/fl_delivery_service_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            ratingbar:childSpacing="10dp"
+            ratingbar:rowSpacing="10dp" />
+
+        <TextView
+            android:id="@+id/tv_delivery_eva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/tv_b1"
+            android:textSize="@dimen/tv_Normal" />
+    </LinearLayout>
+</LinearLayout>

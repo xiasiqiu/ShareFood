@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_header_tv_tv" />
+
+    <com.xinyuan.xyorder.widget.EditTextWithDel
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/search_bg"
+        android:drawableLeft="@drawable/act_home_search_de"
+        android:drawablePadding="5dp"
+        android:gravity="left|center_vertical"
+        android:hint="快速搜索"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:paddingRight="10dp"
+        android:textColor="@color/tv_hint"
+        android:textColorHint="@color/tv_hint"
+        android:textSize="@dimen/tv_light" />
+
+    <com.youth.xframe.widget.loadingview.XLoadingView
+        android:id="@+id/lodingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_choose_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_search_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white" />
+        </FrameLayout>
+    </com.youth.xframe.widget.loadingview.XLoadingView>
+</LinearLayout>

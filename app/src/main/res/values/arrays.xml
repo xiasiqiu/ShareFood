@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reason_type">
+        <item>PAYMENT_PROBLEMS</item>
+        <item>TEMPORARY_EMERGENCY</item>
+        <item>WRONG_INFORMATION</item>
+        <item>CLICK_ERRORLY</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="reason">
+        <item>支付遇到问题</item>
+        <item>临时有事,我不想要了</item>
+        <item>信息错误，我想重新点</item>
+        <item>点错了，我想重新点</item>
+        <item>其他原因</item>
+    </string-array>
+</resources>

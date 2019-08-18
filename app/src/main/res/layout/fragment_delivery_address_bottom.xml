@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white_f2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="附近地址"
+        android:layout_below="@+id/vLine"
+        android:textColor="@color/tv_hint"
+        android:textSize="@dimen/tv_Regular" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/white_f2"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_nearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

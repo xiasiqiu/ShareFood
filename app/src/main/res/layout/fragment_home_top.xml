@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_good_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        app:image_scale_type="fit_xy"
+        app:indicator_drawable_selected="@drawable/banner_shape"
+        app:indicator_height="8dp"
+        app:indicator_margin="6dp"
+        app:indicator_width="8dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_menu"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_below="@+id/banner"
+        android:background="@color/bg_white"
+        android:paddingTop="5dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vp_menu"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/ll_points"
+        android:background="@color/white_f7" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ll_points"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/str_store_recome"
+        android:textColor="@color/tv_name"
+        android:textSize="@dimen/tv_Blod" />
+    <ImageView
+        android:layout_width="5dp"
+        android:layout_height="22dp"
+        android:background="@drawable/shape_green"
+        android:layout_below="@+id/ll_points"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="19dp"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/bg_white"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_invoice_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="40dp">
+
+
+        <TextView
+            android:id="@+id/tv_invoice_person"
+            style="@style/SmalltTextView"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/invoice_person"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:text="个人"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_invoice_con"
+            style="@style/SmalltTextView"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/invoice_company"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:text="公司"
+            android:textColor="@color/yellow"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_invoice_name"
+            style="@style/RegularTextView"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/gray_4d" />
+
+        <TextView
+            android:id="@+id/tv_invoice_num"
+            style="@style/NormalTextView"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/tv_hint" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_address_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        android:src="@drawable/ic_invoice_edite" />
+
+</LinearLayout>

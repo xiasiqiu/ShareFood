@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_f2"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/RegularTextView"
+        android:layout_width="match_parent"
+        android:background="@color/bg_white"
+        android:padding="10dp"
+        android:text="@string/str_upload_pic_notice"
+        android:textColor="@color/tv_hint" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_good_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/view_eva__item_image" />
+
+    <LinearLayout
+        android:id="@+id/ll_evaluating_business_services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_centerVertical="true"
+                android:text="评价商家服务" />
+
+            <com.xinyuan.xyorder.widget.StarBar
+                android:id="@+id/sb_shop_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_shop_name"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                ratingbar:starCount="5"
+                ratingbar:starDistance="10dp"
+                ratingbar:starEmpty="@drawable/ic_store_star_default"
+                ratingbar:starFill="@drawable/ic_store_star"
+                ratingbar:starSize="16dp" />
+        </RelativeLayout>
+
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/fl_seller_service_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            ratingbar:childSpacing="10dp"
+            ratingbar:rowSpacing="10dp" />
+
+        <com.xinyuan.xyorder.widget.EditTextWithDel
+            android:id="@+id/et_shop_eva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_gray_white"
+            android:gravity="left|top"
+            android:hint="说说对商家印象"
+            android:minHeight="100dp"
+            android:padding="5dp"
+            android:textColorHint="@color/tv_hint"
+            android:textSize="@dimen/tv_Normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_evaluating_sending_services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/NormalTextView"
+                android:layout_centerVertical="true"
+                android:text="评价配送服务" />
+
+            <com.xinyuan.xyorder.widget.StarBar
+                android:id="@+id/sb_delivery_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_shop_name"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                ratingbar:starCount="5"
+                ratingbar:starDistance="10dp"
+                ratingbar:starEmpty="@drawable/ic_store_star_default"
+                ratingbar:starFill="@drawable/ic_store_star"
+                ratingbar:starSize="16dp" />
+        </RelativeLayout>
+
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/fl_delivery_service_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            ratingbar:childSpacing="10dp"
+            ratingbar:rowSpacing="10dp" />
+
+        <com.xinyuan.xyorder.widget.EditTextWithDel
+            android:id="@+id/et_delivery_eva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_gray_white"
+            android:gravity="left|top"
+            android:hint="说说对配送员印象"
+            android:minHeight="100dp"
+            android:padding="5dp"
+            android:textColorHint="@color/tv_hint"
+            android:textSize="@dimen/tv_Normal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@id/rl_top"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/rect_green"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/bg_white"
+        android:textSize="17sp" />
+</LinearLayout>

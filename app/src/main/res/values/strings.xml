@@ -1,0 +1,66 @@
+<resources>
+    <string name="menu_home">首页</string>
+    <string name="menu_near">附近</string>
+    <string name="menu_order">订单</string>
+    <string name="menu_mine">我的</string>
+    <string name="search_hint">商家名称 / 商品名称</string>
+
+    <string name="str_store_recome">推荐餐厅</string>
+    <string name="str_area_all">全部区域</string>
+
+    <string name="month_sell">月售%1$s单</string>
+    <string name="avg_price">人均 %1$s</string>
+    <string name="exit_prompt">再按一次退出程序</string>
+    <string name="update_user_prompt">用户名只能修改一次（4-17个字）</string>
+    <string name="take_pic">拍照</string>
+    <string name="choose_pic">选择相册</string>
+    <string name="noitce_exit">请再按一次返回即可退出</string>
+    <string name="notice_no">暂时没有通知消息</string>
+    <string name="money_rmb">¥</string>
+
+
+    <string name="str_location_ing">定位中</string>
+
+    <string name="str_add_address">新增地址</string>
+    <string name="str_add_invoice">新增发票信息</string>
+
+
+    <string name="str_no_pay_type">暂无支持的支付方式</string>
+    <string name="str_no_pay_chooes">还未选择支付方式</string>
+    <string name="str_no_address_chooes">没有可用的收货地址</string>
+    <string name="str_pay_success">支付成功</string>
+    <string name="str_pay_faile">支付失败</string>
+
+
+    <string name="str_order_take_area">订单配送至</string>
+    <string name="str_order_recom">订单预定</string>
+
+    <string name="str_order_no_red">无可用红包</string>
+    <string name="str_order_red_num">个红包可用</string>
+
+    <string name="str_order_recom_time">就餐时间</string>
+    <string name="str_order_recom_num">"就餐人数</string>
+    <string name="str_order_take_time">配送时间</string>
+    <string name="str_order_arriver_time">预计送达时间</string>
+    <string name="str_order_arriver_time_soon">尽快送达时间</string>
+    <string name="str_order_send"> 送达</string>
+
+    <string name="str_order_coupon"> |  已优惠</string>
+
+    <string name="str_order_price_total">小计：  </string>
+
+    <string name="str_reduce">-</string>
+    <string name="prompt">温馨提示：未注册共享点餐的手机号，登录时将自动注册，且代表您已同意《用户服务协议》</string>
+
+    <string name="packup">收起</string>
+
+    <string name="scroll_behavior">@string/appbar_scrolling_view_behavior</string>
+    <string name="detail_header_behavior">com.xinyuan.xyorder.widget.behaviors.DetailHeaderBehavior</string>
+    <string name="str_good_eva">好评率</string>
+    <string name="str_good_activity_limit_str">每单仅限</string>
+    <string name="str_good_activity_spec">特价</string>
+    <string name="str_good_activity_limit_end">份优惠</string>
+    <string name="str_zhe">折</string>
+    <string name="str_upload_pic_notice">最多只能上传三张图片</string>
+
+</resources>

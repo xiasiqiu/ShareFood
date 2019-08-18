@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_f2"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_red_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:drawableRight="@drawable/tv_selector"
+        android:padding="15dp"
+        android:text="不使用红包"
+        android:textColor="@color/gray_4d"
+        android:textSize="@dimen/tv_Regular" />
+
+    <TextView
+        android:id="@+id/tv_red_num"
+        style="@style/RegularTextView"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/tv_hint" />
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_net_error" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XFrame_spacing"
+        android:text="@string/xloading_error_text"
+        android:textColor="@color/XFrame_text_gray"
+        android:textSize="@dimen/XFrame_text_size" />
+
+    <TextView
+        android:id="@id/xloading_retry"
+        style="@style/xloading_padding_style"
+        android:layout_width="110dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="@string/xloading_retry_text"
+        android:textColor="@color/XFrame_white"
+        android:textSize="@dimen/XFrame_text_size" />
+</LinearLayout>
